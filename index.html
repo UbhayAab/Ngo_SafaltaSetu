@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safalta Setu | Bridging the Path to Success</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Placeholder for FontAwesome -->
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Safalta Setu</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Empowering Dreams,<br>Building Futures.</h1>
+            <p>We bridge the gap between ambition and achievement. Join us in creating a world where success is accessible to everyone.</p>
+            <div class="hero-buttons">
+                <a href="#programs" class="btn btn-primary">Our Programs</a>
+                <a href="#contact" class="btn btn-secondary">Get Involved</a>
+            </div>
+        </div>
+        <div class="hero-shape"></div>
+    </header>
+
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Who We Are</h2>
+                <p>Driven by a passion for social impact.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="icon-box">🚀</div>
+                    <h3>Our Mission</h3>
+                    <p>To provide resources, mentorship, and opportunities to underserved communities, enabling them to reach their full potential.</p>
+                </div>
+                <div class="about-card">
+                    <div class="icon-box">💡</div>
+                    <h3>Our Vision</h3>
+                    <p>A society where every individual has the tools and support needed to build a prosperous and fulfilling life.</p>
+                </div>
+                <div class="about-card">
+                    <div class="icon-box">🤝</div>
+                    <h3>Our Values</h3>
+                    <p>Integrity, Inclusivity, Innovation, and Impact. We believe in the power of community and collaboration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="programs" class="section programs">
+        <div class="container">
+            <div class="section-header">
+                <h2>What We Do</h2>
+                <p>Bridging the gap through targeted initiatives.</p>
+            </div>
+            <div class="program-grid">
+                <div class="program-item">
+                    <div class="program-image" style="background-color: #e0f2f1;"></div> <!-- Placeholder color -->
+                    <div class="program-info">
+                        <h3>Skill Development</h3>
+                        <p>Vocational training and workshops to enhance employability and entrepreneurial skills.</p>
+                    </div>
+                </div>
+                <div class="program-item">
+                    <div class="program-image" style="background-color: #e3f2fd;"></div> <!-- Placeholder color -->
+                    <div class="program-info">
+                        <h3>Education Support</h3>
+                        <p>Scholarships, tutoring, and learning materials for students in need.</p>
+                    </div>
+                </div>
+                <div class="program-item">
+                    <div class="program-image" style="background-color: #f3e5f5;"></div> <!-- Placeholder color -->
+                    <div class="program-info">
+                        <h3>Mentorship</h3>
+                        <p>Connecting aspiring individuals with industry leaders and experienced professionals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Have questions or want to collaborate? We'd love to hear from you.</p>
+                    <ul class="contact-details">
+                        <li><strong>Email:</strong> info@safaltasetu.org</li>
+                        <li><strong>Phone:</strong> +91 98765 43210</li>
+                        <li><strong>Location:</strong> New Delhi, India</li>
+                    </ul>
+                </div>
+                <form class="contact-form" onsubmit="event.preventDefault(); showMessage();">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <p id="form-message"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Safalta Setu. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
