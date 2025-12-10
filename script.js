@@ -1,67 +1,63 @@
 document.addEventListener('DOMContentLoaded', () => {
+
     // Mobile Navigation
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
-    const links = document.querySelectorAll('.nav-links li');
 
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
-        hamburger.classList.toggle('toggle');
+        // Animate hamburger icon if needed
     });
 
-    // Smooth Scrolling
+    // Close mobile menu when link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Navbar Scroll Effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Scroll Reveal Animation
+    const revealElements = document.querySelectorAll('.feature-card, .mentor-card, .section-header, .about-text, .cert-card');
+
+    // Add reveal class initially
+    revealElements.forEach(el => el.classList.add('reveal'));
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Smooth Scroll for anchor tags (Polyfill-like behavior)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            navLinks.classList.remove('active'); // Close mobile menu on click
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-
-    // Form Submission Mock
-    window.showMessage = function() {
-        const messageElement = document.getElementById('form-message');
-        const btn = document.querySelector('.contact-form button');
-        
-        btn.textContent = 'Sending...';
-        btn.disabled = true;
-
-        setTimeout(() => {
-            messageElement.textContent = "Thank you! Your message has been sent successfully.";
-            messageElement.style.opacity = 1;
-            btn.textContent = 'Send Message';
-            btn.disabled = false;
-            document.querySelector('.contact-form').reset();
-            
-            setTimeout(() => {
-                messageElement.style.opacity = 0;
-                messageElement.textContent = "";
-            }, 5000);
-        }, 1500);
-    };
-
-    // Scroll Animation Observer
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
             }
         });
-    }, observerOptions);
-
-    document.querySelectorAll('.about-card, .program-item').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-        observer.observe(el);
     });
 });
