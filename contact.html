@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | SafaltaSetu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .form-minimal {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .form-input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--glass-border);
+            padding: 1rem 0;
+            color: var(--text-main);
+            font-size: 1.2rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-bottom-color: var(--saffron-glow);
+        }
+
+        .form-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        option {
+            background: var(--bg-surface);
+            color: var(--text-main);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="light-streak streak-saffron"></div>
+    <div class="light-streak streak-green"></div>
+
+    <!-- ANIMATION UNITS (THE SQUADRON) -->
+    <div class="jet jet-1"></div>
+    <div class="jet jet-2"></div>
+    <div class="jet jet-3"></div>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+            <div class="logo-container">
+                <img src="logo.jpg" alt="Safalta Setu" class="nav-logo-img">
+            </div>
+        </a>
+
+        <!-- Hamburger Icon for Mobile -->
+        <div class="mobile-menu-btn" id="mobile-menu-trigger">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="nav-menu" id="nav-menu">
+            <a href="vision.html" class="nav-link">Vision</a>
+            <a href="partners.html" class="nav-link">Network</a>
+            <a href="contact.html" class="nav-link active">Join</a>
+            <button id="theme-toggle" class="theme-switch" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
+        </div>
+    </nav>
+
+    <header class="section center-text" style="min-height: 50vh;">
+        <div class="container" style="position: relative; z-index: 2;">
+            <h1 class="display-text tricolor-text" style="font-size: 4rem;">Initiate Protocol.</h1>
+            <p class="subtitle">
+                The first step towards mentorship begins here.
+            </p>
+        </div>
+    </header>
+
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <form class="glass-card" style="padding: 40px; border-radius: 20px;"
+                onsubmit="event.preventDefault(); alert('Transmission Received.');">
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="Name or Callsign" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-input" placeholder="Secure Email" required>
+                </div>
+                <div class="form-group">
+                    <select class="form-input" style="color: var(--text-muted);">
+                        <option value="" disabled selected>Select Intent</option>
+                        <option value="student">Seek Mentorship (Ward)</option>
+                        <option value="mentor">Offer Mentorship (Veteran/Civilian)</option>
+                        <option value="partner">Corporate Partnership</option>
+                    </select>
+                </div>
+                <div class="center-text" style="margin-top: 4rem;">
+                    <button type="submit" class="btn-cinema">Establish Uplink</button>
+                </div>
+            </form>
+
+            <div class="center-text" style="margin-top: 4rem;">
+                <p style="color: var(--text-muted);">
+                    Or contact HQ directly:<br>
+                    <span style="color: var(--saffron-glow); font-weight: 700;">partnership@safaltasetu.org</span><br>
+                    +91 7338120082<br>
+                    Mumbai, India
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

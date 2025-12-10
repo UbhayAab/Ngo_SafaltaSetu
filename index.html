@@ -1,231 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SafaltaSetu Marg Foundation | Serving Those Who Serve</title>
-
-    <!-- Premium Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
-        rel="stylesheet">
-
-    <!-- Icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <title>SafaltaSetu | Mentoring Today. Transforming Tomorrow.</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
+    <!-- STREAKS (Fixed Position Backgrounds) -->
+    <div class="light-streak streak-saffron"></div>
+    <div class="light-streak streak-green"></div>
+
+    <!-- ANIMATION UNITS (THE SQUADRON) -->
+    <div class="jet jet-1"></div>
+    <div class="jet jet-2"></div>
+    <div class="jet jet-3"></div>
+
     <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <span class="logo-icon"><i class="fas fa-dharmachakra"></i></span>
-                SafaltaSetu
-            </a>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#mission">Mission</a>
-                <a href="#mentors">Mentorship</a>
-                <a href="#about">About</a>
-                <a href="#contact" class="btn-nav">Contact Us</a>
+        <a href="index.html" class="nav-brand">
+            <div class="logo-container">
+                <img src="logo.jpg" alt="Safalta Setu" class="nav-logo-img">
             </div>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
+        </a>
+
+        <!-- Hamburger Icon for Mobile -->
+        <div class="mobile-menu-btn" id="mobile-menu-trigger">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="nav-menu" id="nav-menu">
+            <a href="vision.html" class="nav-link">Vision</a>
+            <a href="partners.html" class="nav-link">Network</a>
+            <a href="contact.html" class="nav-link">Join</a>
+            <button id="theme-toggle" class="theme-switch" aria-label="Toggle Theme">
+                <i class="fas fa-sun"></i>
+            </button>
         </div>
     </nav>
 
-    <header id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-badge"> Estd. 2025 | Jai Hind</div>
-            <h1>Empowering the Families <br> of Our Guardians</h1>
-            <p>We connect the children of our armed forces with mentors who understand their journey. A bridge to a
-                brighter future for those who sacrifice for ours.</p>
-            <div class="hero-actions">
-                <a href="#mentors" class="btn btn-primary">Find a Mentor</a>
-                <a href="#mission" class="btn btn-secondary">Our Vision</a>
+    <header class="section center-text" id="hero">
+        <div class="container" style="z-index: 2;">
+            <p class="subtitle" style="color: var(--saffron-glow); font-weight: 700; letter-spacing: 2px;">MENTORING
+                TODAY. TRANSFORMING TOMORROW.</p>
+            <!-- NGO BRANDING -->
+            <div style="margin-bottom: 2rem; opacity: 0.9;">
+                <h4
+                    style="font-family: 'Inter', sans-serif; letter-spacing: 3px; color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase;">
+                    SafaltaSetu Marg Foundation
+                </h4>
+                <div style="width: 40px; height: 2px; background: var(--saffron-glow); margin: 10px auto;"></div>
+                <p style="font-size: 0.8rem; color: var(--text-muted);">A Section 8 Non-Profit Organization</p>
+            </div>
+
+            <h1 class="display-text tricolor-text">
+                From Defence Homes<br>to India’s Top Ranks.
+            </h1>
+            <!-- Group buttons for mobile stacking -->
+            <div class="hero-btn-group" style="margin-top: 30px;">
+                <a href="vision.html" class="btn-cinema">Our Mission</a>
+                <a href="#gallantry" class="btn-ghost" style="margin-left: 10px;">Gallantry Stories</a>
             </div>
         </div>
-        <div class="hero-overlay"></div>
     </header>
 
-    <section id="mission" class="section mission-section">
+    <section id="gallantry" class="section">
         <div class="container">
-            <div class="section-header text-center">
-                <span class="section-subtitle">Our Purpose</span>
-                <h2>The SafaltaSetu Pathway</h2>
-                <div class="separator"><i class="fas fa-star"></i></div>
-                <p>To ensure that every Army Brat has the guidance, resources, and network they need to succeed in the
-                    civilian world.</p>
+            <div class="center-text">
+                <h2 style="font-size: 3rem; margin-bottom: 10px;">Legacy of Valour</h2>
+                <p class="subtitle">Inspired by those who gave everything.</p>
             </div>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <h3>Personalized Mentorship</h3>
-                    <p>Connect with veterans and successful professionals who have walked the same path. Guidance that
-                        understands the unique military lifestyle.</p>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); margin-top: 3rem;">
+                <!-- Capt Vikram Batra -->
+                <div class="glass-card" style="border-left: 5px solid var(--saffron-glow);">
+                    <h3>Capt. Vikram Batra, PVC</h3>
+                    <p style="color: var(--saffron-glow); font-weight: 700; margin: 10px 0;">OPERATION VIJAY, 1999</p>
+                    <p class="subtitle" style="text-align: left; margin: 0;">
+                        "Yeh Dil Maange More!" — Leading from the front, Capt. Batra became the symbol of Indian Army's
+                        courage.
+                    </p>
                 </div>
-                <div class="feature-card">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Educational Support</h3>
-                    <p>Resources and scholarships specifically curated for children of defence personnel. We help bridge
-                        the gap between postings.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Community Network</h3>
-                    <p>Join a brotherhood and sisterhood of peers. A strong support system that stays with you, no
-                        matter where you are posted.</p>
+
+                <!-- Major Sandeep Unnikrishnan -->
+                <div class="glass-card" style="border-left: 5px solid var(--green-glow);">
+                    <h3>Maj. Sandeep Unnikrishnan, AC</h3>
+                    <p style="color: var(--green-glow); font-weight: 700; margin: 10px 0;">OPERATION BLACK TORNADO, 2008
+                    </p>
+                    <p class="subtitle" style="text-align: left; margin: 0;">
+                        "Do not come up, I will handle them." — The hero of Mumbai who saved 14 hostages.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="mentors" class="section mentors-section">
+    <section id="program" class="section center-text">
         <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Guidance</span>
-                <h2>Meet Our Mentors</h2>
-                <div class="separator-left"><i class="fas fa-star"></i></div>
-            </div>
+            <h2 class="display-text" style="font-size: 3rem;">The Pathway</h2>
 
-            <div class="mentors-grid">
-                <!-- Placeholder Mentor 1 -->
-                <div class="mentor-card">
-                    <div class="mentor-img placeholder-img"
-                        style="background: linear-gradient(45deg, #1a2a6c, #b21f1f, #fdbb2d);"></div>
-                    <div class="mentor-info">
-                        <h3>Col. Aditya Rao (Retd)</h3>
-                        <span class="mentor-role">Leadership Coach</span>
-                        <p>"Discipline is the bridge between goals and accomplishment. Let me help you build yours."</p>
-                    </div>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); margin-top: 4rem;">
+                <div class="glass-card">
+                    <h3 style="color: var(--saffron-glow);">01. Selection</h3>
+                    <p style="color: var(--text-muted);">Identifying potential.</p>
                 </div>
-                <!-- Placeholder Mentor 2 -->
-                <div class="mentor-card">
-                    <div class="mentor-img placeholder-img"
-                        style="background: linear-gradient(to right, #2c3e50, #4ca1af);"></div>
-                    <div class="mentor-info">
-                        <h3>Dr. Simran Kaur</h3>
-                        <span class="mentor-role">Career Consellor</span>
-                        <p>"As an Army brat myself, I know the challenges. Let's turn your adaptability into your
-                            biggest asset."</p>
-                    </div>
+                <div class="glass-card">
+                    <h3 style="color: var(--text-main);">02. Mentorship</h3>
+                    <p style="color: var(--text-muted);">UPSC & IIT Mentors.</p>
                 </div>
-                <!-- Placeholder Mentor 3 -->
-                <div class="mentor-card">
-                    <div class="mentor-img placeholder-img"
-                        style="background: linear-gradient(to right, #1f4037, #99f2c8);"></div>
-                    <div class="mentor-info">
-                        <h3>Maj. Vikram Singh</h3>
-                        <span class="mentor-role">Tech Entrepreneur</span>
-                        <p>"Innovation meets discipline. Learn how to launch your startup with military precision."</p>
-                    </div>
+                <div class="glass-card">
+                    <h3 style="color: var(--green-glow);">03. Sponsorship</h3>
+                    <p style="color: var(--text-muted);">Financial Aid.</p>
+                </div>
+                <div class="glass-card">
+                    <!-- CHANGED FROM BLUE TO ORANGE/GREEN/WHITE GRADIENT OR PLAIN WHITE per user request (No Blue Text) -->
+                    <h3 class="tricolor-text">04. Alumni</h3>
+                    <p style="color: var(--text-muted);">Future Leaders.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="quote-section">
-        <div class="container">
-            <blockquote>"The welfare of the soldier's family is the welfare of the nation."</blockquote>
-            <cite>- SafaltaSetu Marg Foundation</cite>
+    <footer class="footer-minimal" style="position: relative; overflow: hidden;">
+        <!-- NAVAL FLEET ANIMATION -->
+        <div class="navy-fleet-container">
+            <div class="destroyer destroyer-2"></div> <!-- Lead Ship -->
+            <div class="carrier"></div> <!-- Flagship -->
+            <div class="destroyer destroyer-1"></div> <!-- Rear Guard -->
         </div>
-    </section>
 
-    <section id="about" class="section about-section">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <span class="section-subtitle">Transparency</span>
-                    <h2>Officially Recognized</h2>
-                    <p>SafaltaSetu Marg Foundation is a registered Section 8 Company, dedicated to social welfare and
-                        nation-building. We operate with full transparency and adherence to the laws of the land.</p>
-
-                    <ul class="legal-list">
-                        <li><strong>Registered Name:</strong> SAFALTASETU MARG FOUNDATION</li>
-                        <li><strong>Incorporation Date:</strong> May 19, 2025</li>
-                        <li><strong>CIN:</strong> U88900MH2025NPL448675</li>
-                        <li><strong>Darpan ID:</strong> MH/2025/0672293</li>
-                    </ul>
-                </div>
-                <div class="about-visual">
-                    <div class="cert-card">
-                        <i class="fas fa-certificate"></i>
-                        <h4>Certificate of Incorporation</h4>
-                        <p>Govt. of India, Ministry of Corporate Affairs</p>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 10px;">
+                        SafaltaSetu Marg Foundation</h4>
+                    <div class="reg-details">
+                        <strong>CIN:</strong> U88900MH2025NPL448675 | <strong>TAN:</strong> MUMS40442K<br>
+                        Reg. Section 8 Non-Profit Company<br>
+                        Ministry of Corporate Affairs, Govt of India<br>
+                        Mumbai, Maharashtra
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <div class="contact-box">
-                <div class="contact-header">
-                    <h2>Join the Initiative</h2>
-                    <p>Whether you are a student seeking guidance or a mentor willing to give back, we want you.</p>
-                </div>
-                <div class="contact-grid">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Headquarters</h4>
-                            <p>C2-16, Century Mill Staff Quarters<br>Century Mill, Mumbai - 400030, MH</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email Us</h4>
-                            <a href="mailto:partnership@safaltasetu.org">partnership@safaltasetu.org</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <div>
-                            <h4>Call Us</h4>
-                            <a href="tel:+917338120082">+91 7338120082</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-logo">
-                    <h3>SafaltaSetu</h3>
-                    <p>Bridging Aspirations.</p>
-                </div>
-                <ul class="footer-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#mission">Programs</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <hr class="footer-divider">
-            <div class="footer-bottom">
-                <p>&copy; 2025 SafaltaSetu Marg Foundation. All Rights Reserved.</p>
-                <div class="legal-small">
-                    <span>CIN: U88900MH2025NPL448675</span> | <span>PAN: ABQCS2736R</span> | <span>TAN:
-                        MUMS40442K</span>
+                <div>
+                    <a href="#" class="nav-link">Privacy Policy</a>
+                    <span style="margin: 0 15px; color: var(--text-muted);">|</span>
+                    <a href="#" class="nav-link">Terms of Service</a>
                 </div>
             </div>
         </div>
